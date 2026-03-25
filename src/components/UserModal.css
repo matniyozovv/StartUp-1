@@ -1,0 +1,357 @@
+.user-modal {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.7);
+  z-index: 3000;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  backdrop-filter: blur(8px);
+  animation: fadeIn 0.3s ease;
+}
+
+.user-modal-content {
+  background: white;
+  width: 90%;
+  max-width: 380px;
+  border-radius: 16px;
+  overflow: hidden;
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.25);
+  animation: modalSlideUp 0.4s ease;
+}
+
+@keyframes modalSlideUp {
+  from {
+    opacity: 0;
+    transform: translateY(40px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.close-user-modal {
+  position: absolute;
+  top: 15px;
+  right: 15px;
+  font-size: 24px;
+  color: #7f8c8d;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  z-index: 10;
+  width: 32px;
+  height: 32px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50%;
+  background: rgba(0, 0, 0, 0.05);
+  font-weight: 300;
+}
+
+.close-user-modal:hover {
+  color: #e74c3c;
+  background: rgba(231, 76, 60, 0.1);
+  transform: rotate(90deg);
+}
+
+.user-modal-header {
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  padding: 25px 20px;
+  display: flex;
+  align-items: center;
+  gap: 15px;
+  color: white;
+  position: relative;
+}
+
+.user-modal-avatar {
+  width: 50px;
+  height: 50px;
+  background: rgba(255, 255, 255, 0.2);
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: 2px solid rgba(255, 255, 255, 0.3);
+  font-size: 22px;
+  font-weight: 700;
+  color: white;
+  flex-shrink: 0;
+}
+
+.user-header-info {
+  flex: 1;
+  min-width: 0;
+}
+
+.user-modal-header h3 {
+  font-size: 18px;
+  font-weight: 700;
+  margin-bottom: 5px;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.user-modal-status {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  font-size: 12px;
+  opacity: 0.9;
+}
+
+.status-indicator {
+  width: 6px;
+  height: 6px;
+  border-radius: 50%;
+  background: #2ecc71;
+  animation: pulse 2s infinite;
+}
+
+@keyframes pulse {
+  0% {
+    opacity: 1;
+    transform: scale(1);
+  }
+  50% {
+    opacity: 0.7;
+    transform: scale(1.05);
+  }
+  100% {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+
+.user-modal-body {
+  padding: 20px;
+}
+
+.user-info-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 12px;
+  margin-bottom: 20px;
+}
+
+.info-grid-item {
+  background: #f8f9fa;
+  border-radius: 10px;
+  padding: 12px;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  transition: all 0.3s ease;
+  border: 1px solid #eee;
+}
+
+.info-grid-item:hover {
+  background: #f1f3f4;
+  transform: translateY(-2px);
+}
+
+.info-icon-small {
+  width: 32px;
+  height: 32px;
+  background: white;
+  border-radius: 8px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #3498db;
+  font-size: 14px;
+  flex-shrink: 0;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.05);
+}
+
+.info-content-small {
+  flex: 1;
+  min-width: 0;
+}
+
+.info-label-small {
+  font-size: 10px;
+  color: #7f8c8d;
+  text-transform: uppercase;
+  letter-spacing: 0.3px;
+  margin-bottom: 2px;
+  font-weight: 600;
+  white-space: nowrap;
+}
+
+.info-value-small {
+  font-size: 13px;
+  color: #2c3e50;
+  font-weight: 600;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.user-stats-compact {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 10px;
+  margin-bottom: 15px;
+}
+
+.stat-compact {
+  background: #f8f9fa;
+  border-radius: 10px;
+  padding: 12px;
+  text-align: center;
+  transition: all 0.3s ease;
+  border: 1px solid #eee;
+}
+
+.stat-compact:hover {
+  background: #f1f3f4;
+  transform: translateY(-2px);
+}
+
+.stat-icon-compact {
+  width: 30px;
+  height: 30px;
+  border-radius: 8px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 14px;
+  margin: 0 auto 8px;
+}
+
+.stat-info-compact {
+  text-align: center;
+}
+
+.stat-number-compact {
+  font-size: 16px;
+  font-weight: 800;
+  color: #2c3e50;
+  line-height: 1;
+  margin-bottom: 2px;
+}
+
+.stat-label-compact {
+  font-size: 10px;
+  color: #7f8c8d;
+  text-transform: uppercase;
+  letter-spacing: 0.3px;
+  font-weight: 600;
+}
+
+.user-modal-footer {
+  padding: 15px 20px;
+  background: #f8f9fa;
+  border-top: 1px solid #e9ecef;
+  display: flex;
+  gap: 10px;
+}
+
+.btn-small {
+  flex: 1;
+  padding: 10px 12px;
+  border-radius: 10px;
+  font-weight: 600;
+  font-size: 13px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 6px;
+  border: none;
+  min-height: 38px;
+}
+
+.btn-danger {
+  background: linear-gradient(135deg, #ff6b6b 0%, #ff4757 100%);
+  color: white;
+}
+
+.btn-danger:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 4px 12px rgba(255, 107, 107, 0.3);
+}
+
+.user-modal-footer .btn-outline {
+  background: white;
+  color: #3498db;
+  border: 2px solid #3498db;
+}
+
+.user-modal-footer .btn-outline:hover {
+  background: #3498db;
+  color: white;
+}
+
+@media (max-width: 576px) {
+  .user-modal-content {
+    max-width: 95%;
+    margin: 10px;
+    max-height: 85vh;
+    overflow-y: auto;
+  }
+  .user-modal-header {
+    padding: 20px 15px;
+    flex-direction: column;
+    text-align: center;
+    gap: 10px;
+  }
+  .user-header-info {
+    width: 100%;
+  }
+  .user-modal-header h3 {
+    font-size: 16px;
+  }
+  .user-modal-body {
+    padding: 15px;
+  }
+  .user-info-grid {
+    grid-template-columns: 1fr;
+    gap: 10px;
+  }
+  .user-stats-compact {
+    grid-template-columns: repeat(3, 1fr);
+    gap: 8px;
+  }
+  .user-modal-footer {
+    flex-direction: column;
+    padding: 15px;
+    gap: 8px;
+  }
+  .btn-small {
+    width: 100%;
+    padding: 12px;
+    font-size: 14px;
+  }
+}
+
+@media (max-width: 360px) {
+  .user-modal-header {
+    padding: 15px;
+  }
+  .user-modal-avatar {
+    width: 45px;
+    height: 45px;
+    font-size: 20px;
+  }
+  .info-grid-item {
+    padding: 10px;
+  }
+  .stat-compact {
+    padding: 10px;
+  }
+  .stat-number-compact {
+    font-size: 14px;
+  }
+  .stat-label-compact {
+    font-size: 9px;
+  }
+}

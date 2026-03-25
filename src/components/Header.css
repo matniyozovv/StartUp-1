@@ -1,0 +1,210 @@
+header {
+  background: rgba(255, 255, 255, 0.95);
+  backdrop-filter: blur(10px);
+  box-shadow: var(--shadow);
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 1000;
+  border-bottom: 1px solid rgba(52, 152, 219, 0.1);
+}
+
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 18px 0;
+}
+
+.logo {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  font-size: 26px;
+  font-weight: 800;
+  color: var(--primary);
+  text-decoration: none;
+}
+
+.logo i {
+  color: var(--accent);
+  font-size: 28px;
+}
+
+.logo-text {
+  background: linear-gradient(135deg, var(--primary), var(--accent));
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+.nav-links {
+  display: flex;
+  gap: 35px;
+  align-items: center;
+}
+
+.nav-links a {
+  color: var(--dark);
+  text-decoration: none;
+  font-weight: 600;
+  font-size: 16px;
+  transition: var(--transition);
+  padding: 8px 16px;
+  border-radius: 8px;
+}
+
+.nav-links a:hover {
+  color: var(--primary);
+  background: rgba(52, 152, 219, 0.1);
+}
+
+.nav-links a.active {
+  color: var(--primary);
+  background: rgba(52, 152, 219, 0.15);
+}
+
+.header-buttons {
+  display: flex;
+  gap: 15px;
+  align-items: center;
+}
+
+.btn {
+  padding: 12px 25px;
+  border-radius: var(--radius);
+  border: none;
+  font-weight: 700;
+  font-size: 13px;
+  cursor: pointer;
+  transition: var(--transition);
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  text-decoration: none;
+}
+
+.btn-primary {
+  background: linear-gradient(135deg, var(--primary), var(--primary-dark));
+  color: white;
+  box-shadow: 0 4px 15px rgba(52, 152, 219, 0.3);
+}
+
+.btn-primary:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 6px 20px rgba(52, 152, 219, 0.4);
+}
+
+.btn-outline {
+  background: transparent;
+  color: var(--primary);
+  border: 2px solid var(--primary);
+}
+
+.btn-outline:hover {
+  background: var(--primary);
+  color: white;
+}
+
+.user-profile {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  background: rgba(255, 255, 255, 0.95);
+  padding: 8px 15px;
+  border-radius: 30px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  border: 2px solid rgba(52, 152, 219, 0.3);
+  box-shadow: 0 4px 15px rgba(52, 152, 219, 0.15);
+}
+
+.user-profile:hover {
+  background: white;
+  transform: translateY(-2px);
+  box-shadow: 0 8px 25px rgba(52, 152, 219, 0.25);
+  border-color: var(--primary);
+}
+
+.user-avatar {
+  width: 35px;
+  height: 35px;
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: white;
+  font-weight: 700;
+  font-size: 16px;
+  border: 2px solid white;
+  box-shadow: 0 0 10px rgba(102, 126, 234, 0.4);
+}
+
+.user-name {
+  color: var(--dark);
+  font-weight: 600;
+  font-size: 14px;
+  min-width: 100px;
+  text-align: left;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.logout-btn {
+  width: 32px;
+  height: 32px;
+  border-radius: 50%;
+  background: linear-gradient(135deg, #ff6b6b 0%, #ff4757 100%);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-left: 5px;
+  transition: all 0.3s ease;
+  border: 2px solid rgba(255, 255, 255, 0.8);
+  cursor: pointer;
+  box-shadow: 0 2px 8px rgba(255, 71, 87, 0.3);
+}
+
+.logout-btn:hover {
+  background: linear-gradient(135deg, #ff4757 0%, #ff3838 100%);
+  transform: scale(1.1) rotate(15deg);
+  box-shadow: 0 0 20px rgba(255, 71, 87, 0.6);
+}
+
+.logout-btn i {
+  color: white;
+  font-size: 14px;
+}
+
+.menu-toggle {
+  display: none;
+  font-size: 24px;
+  cursor: pointer;
+  color: var(--primary);
+}
+
+@media (max-width: 992px) {
+  .nav-links {
+    display: none;
+  }
+  .menu-toggle {
+    display: block;
+  }
+}
+
+@media (max-width: 768px) {
+  .btn {
+    padding: 10px 16px;
+    font-size: 12px;
+  }
+  .user-name {
+    min-width: 70px;
+  }
+  .user-profile {
+    padding: 5px 12px;
+  }
+}
