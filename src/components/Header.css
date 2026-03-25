@@ -208,3 +208,122 @@ header {
     padding: 5px 12px;
   }
 }
+/* ========== MOBIL QURILMALAR UCHUN ========== */
+
+/* Planshet va mobil (992px dan kichik) */
+@media (max-width: 992px) {
+  .nav-links {
+    display: none;
+  }
+
+  .menu-toggle {
+    display: block;
+  }
+
+  .header-buttons {
+    display: flex;
+    gap: 10px;
+  }
+
+  .btn {
+    padding: 8px 16px;
+    font-size: 12px;
+  }
+
+  .user-profile {
+    padding: 5px 12px;
+  }
+
+  .user-name {
+    min-width: 60px;
+    font-size: 12px;
+  }
+}
+
+/* Telefonlar (576px dan kichik) */
+@media (max-width: 576px) {
+  .navbar {
+    padding: 12px 0;
+  }
+
+  .logo {
+    font-size: 20px;
+  }
+
+  .logo i {
+    font-size: 22px;
+  }
+
+  .header-buttons {
+    gap: 8px;
+  }
+
+  .btn {
+    padding: 6px 12px;
+    font-size: 11px;
+  }
+
+  .user-profile {
+    padding: 4px 10px;
+    gap: 6px;
+  }
+
+  .user-avatar {
+    width: 28px;
+    height: 28px;
+    font-size: 12px;
+  }
+
+  .user-name {
+    display: none;
+  }
+
+  .logout-btn {
+    width: 28px;
+    height: 28px;
+  }
+
+  .logout-btn i {
+    font-size: 12px;
+  }
+}
+
+/* Mobil menyu */
+.mobile-menu {
+  display: none;
+  position: fixed;
+  top: 70px;
+  left: 0;
+  width: 100%;
+  background: white;
+  box-shadow: 0 10px 20px rgba(0,0,0,0.1);
+  padding: 20px;
+  flex-direction: column;
+  gap: 15px;
+  z-index: 999;
+  border-top: 1px solid #eee;
+}
+
+.mobile-menu.open {
+  display: flex;
+}
+
+.mobile-menu a {
+  color: #2c3e50;
+  text-decoration: none;
+  font-weight: 600;
+  padding: 12px;
+  border-radius: 8px;
+  transition: all 0.3s ease;
+}
+
+.mobile-menu a:hover {
+  background: rgba(52, 152, 219, 0.1);
+  color: #3498db;
+}
+
+@media (min-width: 993px) {
+  .mobile-menu {
+    display: none !important;
+  }
+}
